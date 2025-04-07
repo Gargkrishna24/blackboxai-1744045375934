@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume | HackerRank Style</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --brand-blue: #2CA2C1;
+            --brand-green: #1BA94C;
+        }
+        .bg-brand-blue {
+            background-color: var(--brand-blue);
+        }
+        .text-brand-blue {
+            color: var(--brand-blue);
+        }
+        .bg-brand-green {
+            background-color: var(--brand-green);
+        }
+        .hover\:bg-brand-blue:hover {
+            background-color: var(--brand-blue);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background-color: #e5e7eb;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-brand-blue rounded-md flex items-center justify-center">
+                    <i class="fas fa-code text-white"></i>
+                </div>
+                <span class="text-xl font-bold text-gray-800">Resume</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-brand-blue">About</a>
+                <a href="#experience" class="text-gray-600 hover:text-brand-blue">Experience</a>
+                <a href="#education" class="text-gray-600 hover:text-brand-blue">Education</a>
+                <a href="#skills" class="text-gray-600 hover:text-brand-blue">Skills</a>
+                <a href="#projects" class="text-gray-600 hover:text-brand-blue">Projects</a>
+                <a href="#contact" class="text-gray-600 hover:text-brand-blue">Contact</a>
+            </nav>
+            <button class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" 
+                     alt="Profile" 
+                     class="w-48 h-48 rounded-full object-cover border-4 border-brand-blue">
+            </div>
+            <div class="md:w-2/3 md:pl-12">
+                <h1 class="text-4xl font-bold text-gray-800 mb-2">John Doe</h1>
+                <h2 class="text-2xl text-brand-blue mb-4">Senior Software Engineer</h2>
+                <p class="text-gray-600 mb-6">
+                    Passionate full-stack developer with 5+ years of experience building scalable web applications. 
+                    Specialized in JavaScript, React, and Node.js. Open-source contributor and tech community speaker.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="px-6 py-2 bg-brand-blue text-white rounded-md hover:bg-blue-600 transition">
+                        Download CV
+                    </a>
+                    <a href="#contact" class="px-6 py-2 border border-brand-blue text-brand-blue rounded-md hover:bg-blue-50 transition">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">Work Experience</h2>
+            
+            <div class="max-w-3xl mx-auto space-y-8 pl-8">
+                <!-- Experience Item 1 -->
+                <div class="relative timeline-item pl-8">
+                    <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-brand-blue border-4 border-white"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Senior Software Engineer</h3>
+                            <span class="text-sm text-gray-500">2020 - Present</span>
+                        </div>
+                        <h4 class="text-lg text-brand-blue mb-4">TechCorp Inc.</h4>
+                        <p class="text-gray-600 mb-4">
+                            Lead a team of 5 developers to build and maintain the company's flagship SaaS product.
+                            Implemented microservices architecture that improved system reliability by 40%.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Node.js</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">AWS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="relative timeline-item pl-8">
+                    <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-brand-blue border-4 border-white"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Software Engineer</h3>
+                            <span class="text-sm text-gray-500">2018 - 2020</span>
+                        </div>
+                        <h4 class="text-lg text-brand-blue mb-4">WebSolutions Ltd.</h4>
+                        <p class="text-gray-600 mb-4">
+                            Developed and maintained multiple client websites using modern JavaScript frameworks.
+                            Reduced page load times by 30% through performance optimization techniques.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Vue.js</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">PHP</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">Education</h2>
+            
+            <div class="max-w-3xl mx-auto grid md:grid-cols-2 gap-8">
+                <!-- Education Item 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition border-l-4 border-brand-blue">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Master of Computer Science</h3>
+                    <h4 class="text-lg text-brand-blue mb-2">Stanford University</h4>
+                    <span class="text-sm text-gray-500 block mb-4">2016 - 2018</span>
+                    <p class="text-gray-600">
+                        Specialized in Artificial Intelligence and Machine Learning. Thesis on "Neural Networks for Image Recognition".
+                    </p>
+                </div>
+
+                <!-- Education Item 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition border-l-4 border-brand-blue">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Bachelor of Engineering</h3>
+                    <h4 class="text-lg text-brand-blue mb-2">MIT</h4>
+                    <span class="text-sm text-gray-500 block mb-4">2012 - 2016</span>
+                    <p class="text-gray-600">
+                        Major in Computer Science. Minor in Mathematics. Graduated with honors.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">Skills</h2>
+            
+            <div class="max-w-3xl mx-auto">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Programming Languages</h3>
+                <div class="flex flex-wrap gap-3 mb-8">
+                    <span class="px-4 py-2 bg-white text-gray-800 rounded-full shadow-sm flex items-center">
+                        <i class="fab fa-js text-yellow-400 mr-2"></i> JavaScript
+                    </span>
+                    <span class="px-4 py-2 bg-white text-gray-800 rounded-full shadow-sm flex items-center">
+                        <i class="fab fa-python text-blue-500 mr-2"></i> Python
+                    </span>
+                    <span class="px-4 py-2 bg-white text-gray-800 rounded-full shadow-sm flex items-center">
+                        <i class="fab fa-java text-red-500 mr-2"></i> Java
+                    </span>
+                </div>
+
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Frameworks & Technologies</h3>
+                <div class="flex flex-wrap gap-3 mb-8">
+                    <span class="px-4 py-2 bg-white text-gray-800 rounded-full shadow-sm">React</span>
+                    <span class="px-4 py-2 bg-white text-gray-800 rounded-full shadow-sm">Node.js</span>
+                    <span class="px-4 py-2 bg-white text-gray-800 rounded-full shadow-sm">Express</span>
+                    <span class="px-4 py-2 bg-white text-gray-800 rounded-full shadow-sm">MongoDB</span>
+                    <span class="px-4 py-2 bg-white text-gray-800 rounded-full shadow-sm">Docker</span>
+                </div>
+
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Tools & Platforms</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-4 py-2 bg-white text-gray-800 rounded-full shadow-sm flex items-center">
+                        <i class="fab fa-git-alt text-orange-500 mr-2"></i> Git
+                    </span>
+                    <span class="px-4 py-2 bg-white text-gray-800 rounded-full shadow-sm">AWS</span>
+                    <span class="px-4 py-2 bg-white text-gray-800 rounded-full shadow-sm">Firebase</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">Projects</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg" 
+                         alt="Project 1" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">E-commerce Platform</h3>
+                        <p class="text-gray-600 mb-4">
+                            Full-featured online store with payment integration, product management, and user authentication.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-xs">React</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-xs">Node.js</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-xs">MongoDB</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-brand-blue hover:underline">Live Demo</a>
+                            <a href="#" class="text-brand-blue hover:underline">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg" 
+                         alt="Project 2" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Task Management App</h3>
+                        <p class="text-gray-600 mb-4">
+                            Collaborative task management system with real-time updates, team assignments, and progress tracking.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-xs">Vue.js</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-xs">Firebase</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-brand-blue hover:underline">Live Demo</a>
+                            <a href="#" class="text-brand-blue hover:underline">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">Get In Touch</h2>
+            
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-sm">
+                <form>
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" 
+                                   class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-blue">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" 
+                                   class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-blue">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                        <input type="text" id="subject" 
+                               class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-blue">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 mb-2">Message</label>
+                        <textarea id="message" rows="4" 
+                                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-blue"></textarea>
+                    </div>
+                    <button type="submit" 
+                            class="w-full bg-brand-blue text-white py-3 px-6 rounded-md hover:bg-blue-600 transition">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-brand-blue rounded-md flex items-center justify-center">
+                            <i class="fas fa-code text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold">John Doe</span>
+                    </div>
+                    <p class="text-gray-400">Full-stack developer building digital solutions.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-hackerrank text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 John Doe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.md\\:hidden').addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+            nav.classList.toggle('flex-col');
+            nav.classList.toggle('absolute');
+            nav.classList.toggle('top-16');
+            nav.classList.toggle('right-6');
+            nav.classList.toggle('bg-white');
+            nav.classList.toggle('p-4');
+            nav.classList.toggle('rounded-md');
+            nav.classList.toggle('shadow-lg');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form validation
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            if (!name || !email || !message) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            if (!/^\S+@\S+\.\S+$/.test(email)) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            // Form is valid - in a real app you would send this to a server
+            alert('Message sent successfully!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
